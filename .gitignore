@@ -12,4 +12,11 @@ data/processed/
 
 # Giấu file cấu hình môi trường chứa mật khẩu/API Key
 backend/.env
+<<<<<<< HEAD
 .env
+
+**/__pycache__/
+*.pyc
+=======
+.env
+>>>>>>> origin/main
