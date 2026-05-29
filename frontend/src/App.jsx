@@ -10,7 +10,7 @@ function App() {
         const data = await checkHealth();
         console.log("Backend response: ", data);
         setStatus(data.status);
-      } catch {
+      } catch (error) {
         console.error("Backend connection failed:", error);
         setStatus("failed");
       }

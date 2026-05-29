@@ -1,8 +1,8 @@
-# Giấu toàn bộ thư mục data
+# Hide generated and local data folders
 data/raw/
 data/processed/
 
-# Giấu các file dữ liệu phổ biến nếu lỡ tay để ngoài thư mục data
+# Hide common local data/model files
 *.csv
 *.xlsx
 *.h5
@@ -10,13 +10,19 @@ data/processed/
 *.npz
 *.pkl
 
-# Giấu file cấu hình môi trường chứa mật khẩu/API Key
+# Hide local environment files
 backend/.env
-<<<<<<< HEAD
 .env
 
+# Python
 **/__pycache__/
 *.pyc
-=======
-.env
->>>>>>> origin/main
+
+# Frontend
+frontend/node_modules/
+frontend/dist/
+frontend/.env
+
+# OS/editor
+.DS_Store
+Thumbs.db

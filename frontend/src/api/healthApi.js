@@ -2,7 +2,7 @@
 // - const: Đảm bảo biến địa chỉ này không bị ghi đè hoặc thay đổi ở các dòng code dưới.
 // - import.meta.env: Cú pháp của hệ thống cuộn mã Vite, dùng để đọc các biến môi trường từ file `.env`.
 // - VITE_API_BASE_URL: Tên biến chứa địa chỉ Backend (ví dụ: http://localhost:8000). Tiền tố VITE_ là bắt buộc để Vite cho phép Frontend truy cập.
-const API_BASE_URL = import.meta.env.VITE_API_BASE_URL;
+const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || "http://localhost:8000";
 
 // 2. Định nghĩa và xuất (export) một hàm xử lý bất đồng bộ (async).
 // - export: Xuất hàm này ra ngoài để các file giao diện khác (như App.jsx) có thể import vào sử dụng.
