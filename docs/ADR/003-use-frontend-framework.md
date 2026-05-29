@@ -14,4 +14,4 @@ Use ReactJS as the frontend framework.
 ## Consequences
 
 - Easy to update project./
-- Test.
+- Bảo mật tốt.
