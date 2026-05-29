@@ -1,0 +1,15 @@
+# Giấu toàn bộ thư mục data
+data/raw/
+data/processed/
+
+# Giấu các file dữ liệu phổ biến nếu lỡ tay để ngoài thư mục data
+*.csv
+*.xlsx
+*.h5
+*.npy
+*.npz
+*.pkl
+
+# Giấu file cấu hình môi trường chứa mật khẩu/API Key
+backend/.env
+.env
