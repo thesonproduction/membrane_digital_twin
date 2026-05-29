@@ -1,0 +1,17 @@
+name: Lock Main Branch
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  block-push:
+    runs-on: ubuntu-latest
+    # Chỉ chặn nếu push thẳng, không chặn nếu gộp từ Pull Request
+    if: github.event.base_ref == null && github.event.head_ref == null
+    steps:
+      - name: Reject
+        run: |
+          echo "Dừng lại! Nhánh MAIN đã bị khóa. Hãy mở Pull Request để duyệt code!"
+          exit 1
