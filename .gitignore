@@ -13,3 +13,6 @@ data/processed/
 # Giấu file cấu hình môi trường chứa mật khẩu/API Key
 backend/.env
 .env
+
+**/__pycache__/
+*.pyc
