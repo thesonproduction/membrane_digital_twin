@@ -8,10 +8,10 @@ on:
 jobs:
   block-push:
     runs-on: ubuntu-latest
-    # Chỉ chặn nếu push thẳng, không chặn nếu gộp từ Pull Request
-    if: github.event.base_ref == null && github.event.head_ref == null
     steps:
-      - name: Reject
+      - name: Check if merge or direct push
         run: |
-          echo "Dừng lại! Nhánh MAIN đã bị khóa. Hãy mở Pull Request để duyệt code!"
+          # Nếu không phải là một hành động gộp từ Pull Request, chặn ngay lập tức
+          echo "Hệ thống phát hiện hành vi push thẳng lên main!"
+          echo "Vui lòng mở Pull Request để duyệt code."
           exit 1
